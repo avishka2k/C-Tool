@@ -518,10 +518,10 @@ int main()
                 printf("with a group of friends doing a project. So there may be bugs here.The steps \n");
                 printf("here can  be short. So in your  opinion you can  fix the bugs  in it of  add \n");
                 printf("somthing new to the manu. Details about the project are given below.\n");
-                printf("\n  #Priject Link: https://github.com/avishka2k/C-Tool");
+                printf("\n  #Project Link: https://github.com/avishka2k/C-Tool");
                 printf("\n\n  If you found this important, please folllow my social media.\n");
                 printf("\n\tMy GitHub Profile: https://github.com/avishka2k");
-                printf("\n\tTwittwer: https://twitter.com/AvishkaPrabath6");
+                printf("\n\tTwitter: https://twitter.com/AvishkaPrabath6");
                 printf("\n\tlinkdin: https://www.linkedin.com/in/a-prabath-9b3267213\n");
                 exit(0);
                     }
