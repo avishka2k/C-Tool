@@ -13,30 +13,53 @@ int main()
       
     int manu_no;
 
-    
-    printf("\t\n====================MANU====================\n\n");
-      
-      printf("1. Number sum,Number subtract,number multiplication,Number division\n");
-      printf("2. Array sum,Array subtract,Array multiplication,Array division\n");
-      printf("3. Birth day calculator\n");
-      printf("4. Students Mark(max,min,avg,pass/fail)\n");
-      printf("5. Digital clock\n");
-      printf("6. STOP Watch\n");
-      printf("7. Factorial\n");
-      printf("8. Find the number of digits in a value\n");
-      printf("\nSwitch Manu: ");
+       printf("\n ====================MANU==================\n");
+      printf("|                                           |\n");
+      Sleep(200);
+      printf("| 1. Calculator                             |\n");
+      Sleep(200);
+      printf("| 2. Array Calculator                       |\n");
+       Sleep(200);
+      printf("| 3. Birth day Calculator                   |\n");
+       Sleep(200);
+      printf("| 4. Number system conversion               |\n");
+       Sleep(200);
+      printf("| 5. Students Mark(max,min,avg,pass/fail)   |\n");
+       Sleep(200);
+      printf("| 6. Digital clock                          |\n");
+       Sleep(200);
+      printf("| 7. STOP Watch                             |\n");
+       Sleep(200);
+      printf("| 8. Factorial                              |\n");
+       Sleep(200);
+      printf("| 9. Find the number of digits in a value   |\n");
+       Sleep(200);
+      /*-------------Add New Tool-------------------------------
+
+                    printf(" ");
+
+      --------------------------------------------------------*/
+      printf("| 10.Info                                   |\n");
+       Sleep(200);
+      printf("| 11.EXIT                                   |\n");
+       Sleep(200);
+      printf("|                                           |\n");
+      printf(" ===========================================\n");
+      printf("\nWhat do you want?: ");
       scanf("%d",&manu_no);
 
       
  switch (manu_no)
   {
    /*================>>>Number sum,Number subtract,number multiplication,Number division<<<=================*/
+
         case 1:
           { 
-           float no1,no2;
+           printf("\n--------------------------------------Calculator--------------------------------------\n\n");
+            float no1,no2;
             int ch; 
-              printf("\nSum: 1\tSubtract: 2\tMultiplication: 3\tDivision: 4\tAll: 5\n");
-                printf("Enter your choice: ");
+              printf("Sum: 1\tSubtract: 2\tMultiplication: 3\tDivision: 4\tAll: 5\n");
+              printf("Enter your choice: ");
                   scanf("%d",&ch);
   
                           printf("\nEnter first number: ");
@@ -47,22 +70,22 @@ int main()
                switch (ch)
                {
                 case 5:{
-               case 1:
+                  case 1:
                      printf("Sum: %.2f\n",no1+no2);
                       if(ch!=5)
-                         break;
-                           case 2:
-                            printf("subtract: %.2f\n",no1-no2);
-                              if(ch!=5)
-                               break;
-                               case 3:
-                               printf("multiplication: %.2f\n",no1*no2);
-                            if(ch!=5)
-                         break;
-                       case 4:
+                        break;
+                  case 2:
+                     printf("subtract: %.2f\n",no1-no2);
+                      if(ch!=5)
+                        break;
+                  case 3:
+                    printf("multiplication: %.2f\n",no1*no2);
+                      if(ch!=5)
+                        break;
+                  case 4:
                     printf("Division: %.2f\n",no1/no2);
-                   if(ch!=5)
-                 break;
+                      if(ch!=5)
+                        break;
                }
                }
           }break;
@@ -72,11 +95,11 @@ int main()
         case 2: 
          {
         
- 
+             printf("\n--------------------------------------Array calculator--------------------------------------\n\n");
                     int size;
-                    printf("\nEnter array size: ");
+                    printf("Enter array size: ");
                     scanf("%d",&size);
-
+                  
                       float arr1[size],arr2[size],arrsum[size];
                       float arrsub[size],arrmul[size];
                       float arrdiv[size];
@@ -164,7 +187,7 @@ int main()
                int bday,bmonth,byear;
                int days,monts,years;
                int i;
-          
+                printf("\n--------------------------------------Birth day calculator--------------------------------------\n\n");
                   printf("Enter date of today(like this YYYY MM DD): ");
                   scanf("%d %d %d",&nyear,&nmonth,&nday);
                   printf("Enter your birth day(like this YYYY MM DD): ");
@@ -216,17 +239,70 @@ int main()
               }
             
           }break;
+    
+    /*===================================>>>Number system conversion<<<=====================================*/
+
+        case 4:
+          {   
+
+            printf("\n--------------------------------------Number system conversion--------------------------------------\n\n");
+              while (1)
+              {
+                 
+                     int conversion;
+                     int dec;
+                       printf("\n-------------------------"); 
+                       printf("\n  1. Decimal To Octal");
+                       printf("\n  2. Octal To Decimal");
+                       printf("\n  3. Decimal To Hexadecimal");
+                       printf("\n  4. Hexadecimal To Decimal");
+                       printf("\n  5. Exit");
+                          printf("\n\nWhat do you want? ");
+                          scanf("%d",&conversion);
+                            
+                     switch(conversion)
+                          {
+                          case 1:
+                               printf("\nEnter Decimal number: ");
+                               scanf("%d",&dec);
+                               printf("\nThe Octal value: %o\n",dec);
+                            break;                                                 
+                          case 2:
+                               printf("\nEnter Octal number: ");
+                               scanf("%o",&dec);
+                               printf("\nThe Decimal value: %d\n",dec);
+                            break;
+                          case 3:
+                               printf("\nEnter Decimal number: ");
+                               scanf("%d",&dec);
+                               printf("\nThe Hexadicimal value: %x\n",dec);
+                            break;  
+                          case 4:  
+                               printf("\nEnter Hexadicimal number: ");
+                               scanf("%x",&dec);
+                               printf("\nThe Decimal value: %d\n",dec);
+                            break;
+                          case 5:
+                              exit(0);
+                            break;
+                          }
+                         
+
+              }       
+
+
+          }break;
 
     /*=============================>>>Students Mark(max,min,avg,pass/fail)<<<===============================*/ 
   
-        case 4:
+        case 5:
           {
                             float sum=0,avg;
                             int i,no_of_students;
                             int min=0,max=0;
                             int a,b,c,s,f;
                              
-
+                  printf("\n--------------------------------------Students Mark--------------------------------------\n\n");
                                 printf("Enter Number of students: ");
                                 scanf("%d",&no_of_students);
                                 float mark[no_of_students];
@@ -248,8 +324,8 @@ int main()
                                 }
                              avg=sum/no_of_students;
                             printf("\nMinimum mark: %d\n",min);
-                         printf("Maximum mark: %d\n",max);
-                       printf("The Average mark: %.2f\n",avg);
+                            printf("Maximum mark: %d\n",max);
+                            printf("The Average mark: %.2f\n",avg);
                             }
 
                                     a=0;
@@ -280,11 +356,11 @@ int main()
 
     /*==========================================>>>Digital clock<<<=========================================*/
           
-        case 5:
+        case 6:
           {
 
                    int s,m,h;
-                     
+                     printf("\n--------------------------------------Digital clock--------------------------------------\n");
                      printf("\nSet Time\n");
                        printf("H: ");
                        scanf("%d",&h);
@@ -320,9 +396,9 @@ int main()
 
     /*===========================================>>>Stop Watch<<<===========================================*/
 
-        case 6:
+        case 7:
           {
-
+                printf("\n--------------------------------------Stop Watch--------------------------------------\n");
                   int s,m,h;
                       printf("\n");
                        printf("H: ");
@@ -361,11 +437,11 @@ int main()
 
     /*==========================================>>>Factorial<<<=============================================*/
 
-        case 7:
+        case 8:
           {
             float i,number,factorial=1;
-
-              printf("\nEnter number: ");
+              printf("\n--------------------------------------Factorial--------------------------------------\n\n");
+              printf("Enter number: ");
                   scanf("%f",&number);
  
                     for(i=1;i<=number;i++){
@@ -379,11 +455,11 @@ int main()
 
     /*=============================>>>Find the number of digits in a value<<<===============================*/
        
-       case 8:
+       case 9:
           {
                       int num,count=0;
-
-                       printf("\nEnter number: ");
+                       printf("\n--------------------------Find the number of digits in a value--------------------------\n\n");
+                       printf("Enter number: ");
                        scanf("%d",&num);
 
                           while (num!=0)
@@ -393,11 +469,67 @@ int main()
                       }
                       printf("Count of Numbers: %d",count);
 
-                  }break;
+          }break;
+    /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Reserved for friends<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
-    /*===============================>>>Find the number of digits in a value<<<==============================*/
-            }
-    printf("\n");
-      }
+                        //Write the code in this section according to your idea
+
+    /*=============================================>>>Info<<<===============================================*/
+        case 10:
+          {
+                printf("\n------------------------------------Info------------------------------------\n\n");
+                printf("Hi there!\n I am A Prabath. This was written just for practical training and experience\n");
+                printf("with a group of friends doing a project. So there may be bugs here.The steps \n");
+                printf("here can  be short. So in your  opinion you can  fix the bugs  in it of  add \n");
+                printf("somthing new to the manu. Details about the project are given below.\n");
+                printf("\n  #Priject Link: https://github.com/avishka2k/C-Tool");
+                printf("\n\n  If you found this important, please folllow my social media.\n");
+                printf("\n\tMy GitHub Profile: https://github.com/avishka2k");
+                printf("\n\tTwittwer: https://twitter.com/AvishkaPrabath6");
+                printf("\n\tlinkdin: https://www.linkedin.com/in/a-prabath-9b3267213\n");
+                
+           }break;
+               
+    /*=============================================>>>EXIT<<<===============================================*/
+       case 11:
+          {
+            system("cls");
+            printf("\n\tHave a nice Day!\n\n");
+            exit(0);
+          }break;
+    
+       default :
+          {
+        
+          int yn;
+            printf("\nSorry, nothing about the number you entered. if possible you can add activation.\n");
+            printf("Do you want to make any changes or add any thing to the manu? Check Info (Y: 1/N: 2): ");
+            scanf("%d",&yn);
+            system("cls");
+            if(yn==2)
+              { 
+                printf("\n\tHave a nice Day!\n\n");
+                exit(0);
+              }
+            else if(yn==1) 
+                  {
+                printf("\n------------------------------------Info------------------------------------\n\n");
+                printf("Hi there!\n I am A Prabath. This was written just for practical training and experience\n");
+                printf("with a group of friends doing a project. So there may be bugs here.The steps \n");
+                printf("here can  be short. So in your  opinion you can  fix the bugs  in it of  add \n");
+                printf("somthing new to the manu. Details about the project are given below.\n");
+                printf("\n  #Priject Link: https://github.com/avishka2k/C-Tool");
+                printf("\n\n  If you found this important, please folllow my social media.\n");
+                printf("\n\tMy GitHub Profile: https://github.com/avishka2k");
+                printf("\n\tTwittwer: https://twitter.com/AvishkaPrabath6");
+                printf("\n\tlinkdin: https://www.linkedin.com/in/a-prabath-9b3267213\n");
+                exit(0);
+                    }
+
+                 }break;
+       
+             }
+       printf("\n");
+       }
  return 0;
 }
