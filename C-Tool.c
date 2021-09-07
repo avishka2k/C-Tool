@@ -4,16 +4,17 @@
 
 int main()
 
- {
+{
   // enter user input of array
-     
+     int go;
     /*============================Main Manu==================================*/
     while (1)
 {
       
     int manu_no;
+   
 
-       printf("\n ====================MANU==================\n");
+      printf("\n ====================MANU==================\n");
       printf("|                                           |\n");
       Sleep(200);
       printf("| 1. Calculator                             |\n");
@@ -56,38 +57,54 @@ int main()
         case 1:
           { 
            printf("\n--------------------------------------Calculator--------------------------------------\n\n");
-            float no1,no2;
-            int ch; 
+
+            float no1,no2;           
+            char go,ch;
+
+            while (1)
+            {
+               
               printf("Sum: 1\tSubtract: 2\tMultiplication: 3\tDivision: 4\tAll: 5\n");
               printf("Enter your choice: ");
-                  scanf("%d",&ch);
+             scanf("%s",&ch);
   
                           printf("\nEnter first number: ");
-                        scanf("%f",&no1);
-                     printf("Enter first number: ");
-                   scanf("%f",&no2);
-                 printf("\n");
+                          scanf("%f",&no1);
+                          printf("Enter first number: ");
+                          scanf("%f",&no2);
+                          printf("\n");
+
                switch (ch)
                {
-                case 5:{
-                  case 1:
+                case '5':{
+                  case '1':
                      printf("Sum: %.2f\n",no1+no2);
-                      if(ch!=5)
+                      if(ch!='5')
                         break;
-                  case 2:
+                  case '2':
                      printf("subtract: %.2f\n",no1-no2);
-                      if(ch!=5)
+                      if(ch!='5')
                         break;
-                  case 3:
+                  case '3':
                     printf("multiplication: %.2f\n",no1*no2);
-                      if(ch!=5)
+                      if(ch!='5')
                         break;
-                  case 4:
+                  case '4':
                     printf("Division: %.2f\n",no1/no2);
-                      if(ch!=5)
+                      if(ch!='5')
                         break;
+                        }
+            
+           
                }
-               }
+                printf("\nBack(Y/N): ");
+                scanf("%s",&go);
+                if(go=='y')
+                break;
+                           
+                 
+            
+            }
           }break;
            
     /*==========================>>>array sum, subtract, multiplication, division<<==========================*/  
@@ -96,6 +113,8 @@ int main()
          {
         
              printf("\n--------------------------------------Array calculator--------------------------------------\n\n");
+             while (1)
+                       {
                     int size;
                     printf("Enter array size: ");
                     scanf("%d",&size);
@@ -104,6 +123,7 @@ int main()
                       float arrsub[size],arrmul[size];
                       float arrdiv[size];
                       int i,choice;
+                      char go;
 
                     /*-----------------enter first array----------------*/
                               printf("\nEnter first array:\n");
@@ -117,6 +137,8 @@ int main()
                         printf("element %d: ",i+1);
                            scanf("%f",&arr2[i]);
                        }
+                       
+                        
                             printf("\nSum: 1\tSubtract: 2\tMultiplication: 3\tDivision: 4\tAll: 5\n");
                               printf("Enter your choice (+ - * /): ");
                               scanf("%d",&choice);
@@ -175,7 +197,12 @@ int main()
                                 break;
                            } 
                          
-                }  
+                } 
+                printf("\n\nBack(Y/N): ");
+                scanf("%s",&go);
+                if(go=='y')
+                break;
+                       } 
 
          } break;
 
@@ -187,7 +214,11 @@ int main()
                int bday,bmonth,byear;
                int days,monts,years;
                int i;
+               char go;
                 printf("\n--------------------------------------Birth day calculator--------------------------------------\n\n");
+                while (1)
+                
+               {
                   printf("Enter date of today(like this YYYY MM DD): ");
                   scanf("%d %d %d",&nyear,&nmonth,&nday);
                   printf("Enter your birth day(like this YYYY MM DD): ");
@@ -237,7 +268,11 @@ int main()
                  }
 
               }
-            
+               printf("\n\nBack(Y/N): ");
+                scanf("%s",&go);
+                if(go=='y')
+                break;
+          } 
           }break;
     
     /*===================================>>>Number system conversion<<<=====================================*/
@@ -246,6 +281,7 @@ int main()
           {   
 
             printf("\n--------------------------------------Number system conversion--------------------------------------\n\n");
+            char go;
               while (1)
               {
                  
@@ -286,7 +322,11 @@ int main()
                               exit(0);
                             break;
                           }
-                         
+
+                 printf("\n\nBack(Y/N): ");
+                scanf("%s",&go);
+                if(go=='y')
+                break;        
 
               }       
 
@@ -297,13 +337,18 @@ int main()
   
         case 5:
           {
-                            float sum=0,avg;
+                            float sum,avg;
                             int i,no_of_students;
-                            int min=0,max=0;
+                            int min,max;
                             int a,b,c,s,f;
-                             
-                  printf("\n--------------------------------------Students Mark--------------------------------------\n\n");
-                                printf("Enter Number of students: ");
+                             char go;
+                  printf("\n--------------------------------------Students Mark--------------------------------------\n");
+                  while(1)
+                  {
+                               
+                           min=0,max=0,sum=0;
+
+                                printf("\nEnter Number of students: ");
                                 scanf("%d",&no_of_students);
                                 float mark[no_of_students];
                             { 
@@ -351,6 +396,14 @@ int main()
                                 printf("Number of students with a grade of C: %d\n",c);
                                 printf("Number of students with a grade of S: %d\n",s);
                                 printf("Number of students with a grade of F: %d\n",f);
+
+
+                     printf("\n\nBack(Y/N): ");
+                      scanf("%s",&go);
+                      if(go=='y')
+                       break;
+               
+                  }
 
           }break;
 
@@ -439,9 +492,12 @@ int main()
 
         case 8:
           {
-            float i,number,factorial=1;
-              printf("\n--------------------------------------Factorial--------------------------------------\n\n");
-              printf("Enter number: ");
+            float i,number,factorial;
+              printf("\n--------------------------------------Factorial--------------------------------------\n");
+               while (1)
+               {
+                factorial=1;
+              printf("\nEnter number: ");
                   scanf("%f",&number);
  
                     for(i=1;i<=number;i++){
@@ -450,16 +506,24 @@ int main()
               }
 
                 printf("\nNumber of Factorial: %.0f",factorial);
-                      
+
+                printf("\n\nBack(Y/N): ");
+                scanf("%s",&go);
+                if(go=='y')
+                break;
+               }       
           }break;
 
     /*=============================>>>Find the number of digits in a value<<<===============================*/
        
        case 9:
           {
-                      int num,count=0;
-                       printf("\n--------------------------Find the number of digits in a value--------------------------\n\n");
-                       printf("Enter number: ");
+                      int num,count;
+                       printf("\n--------------------------Find the number of digits in a value--------------------------\n");
+                       while (1)
+                       {
+                       count=0;
+                       printf("\nEnter number: ");
                        scanf("%d",&num);
 
                           while (num!=0)
@@ -469,6 +533,12 @@ int main()
                       }
                       printf("Count of Numbers: %d",count);
 
+                         printf("\n\nBack(Y/N): ");
+                         scanf("%s",&go);
+                         if(go=='y')
+                          break;
+
+                       }
           }break;
     /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Reserved for friends<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -477,17 +547,25 @@ int main()
     /*=============================================>>>Info<<<===============================================*/
         case 10:
           {
+            char go;
+
                 printf("\n------------------------------------Info------------------------------------\n\n");
                 printf("Hi there!\n I am A Prabath. This was written just for practical training and experience\n");
                 printf("with a group of friends doing a project. So there may be bugs here.The steps \n");
                 printf("here can  be short. So in your  opinion you can  fix the bugs  in it of  add \n");
                 printf("somthing new to the manu. Details about the project are given below.\n");
-                printf("\n  #Priject Link: https://github.com/avishka2k/C-Tool");
+                printf("\n  #Project Link: https://github.com/avishka2k/C-Tool");
                 printf("\n\n  If you found this important, please folllow my social media.\n");
                 printf("\n\tMy GitHub Profile: https://github.com/avishka2k");
-                printf("\n\tTwittwer: https://twitter.com/AvishkaPrabath6");
+                printf("\n\tTwitter: https://twitter.com/AvishkaPrabath6");
                 printf("\n\tlinkdin: https://www.linkedin.com/in/a-prabath-9b3267213\n");
-                
+
+              printf("\nBack(Y/N): ");
+                scanf("%s",&go);
+                if(go=='y')
+                break;
+
+
            }break;
                
     /*=============================================>>>EXIT<<<===============================================*/
@@ -528,6 +606,19 @@ int main()
 
                  }break;
        
+             }
+  
+             while (1)
+             {
+             printf("\nGo to manu(Y/N): ");
+             scanf("%s",&go);
+             if(go=='y'){
+             break;
+             } 
+             if(go=='n')
+              exit(0);            
+             else
+              printf("\nInvalide option\n");
              }
        printf("\n");
        }
