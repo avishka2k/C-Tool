@@ -6,15 +6,15 @@ int main()
 
 {
   // enter user input of array
-     int go;
-    /*============================Main Manu==================================*/
+     char go;
+    /*============================Main Menu==================================*/
     while (1)
 {
-      
+     
     int manu_no;
-   
+   {
 
-      printf("\n ====================MANU==================\n");
+      printf("\n ====================MENU==================\n");
       printf("|                                           |\n");
       Sleep(200);
       printf("| 1. Calculator                             |\n");
@@ -35,20 +35,22 @@ int main()
        Sleep(200);
       printf("| 9. Find the number of digits in a value   |\n");
        Sleep(200);
+      printf("| 10.Arrat equal or not equal               |\n");
+       Sleep(200);
       /*-------------Add New Tool-------------------------------
 
                     printf(" ");
 
       --------------------------------------------------------*/
-      printf("| 10.Info                                   |\n");
+      printf("| 11.Info                                   |\n");
        Sleep(200);
-      printf("| 11.EXIT                                   |\n");
+      printf("| 12.EXIT                                   |\n");
        Sleep(200);
       printf("|                                           |\n");
-      printf(" ===========================================\n");
+      printf(" ===========================================\n"); 
       printf("\nWhat do you want?: ");
       scanf("%d",&manu_no);
-
+   }
       
  switch (manu_no)
   {
@@ -540,12 +542,112 @@ int main()
 
                        }
           }break;
+
+    /*===================================>>>Arrat equal or not equal<<<=====================================*/
+       case 10:
+          {
+            printf("\n----------------------------Arrat equal or not equal----------------------------\n");
+            char go;
+        while (1)
+        {
+          
+        
+             int row_size,col_size;
+                printf("\nNumber of Rows: ");
+                scanf("%d",&row_size);
+                printf("Number of collom: ");
+                scanf("%d",&col_size);
+
+              int arr1[row_size][col_size];
+              int arr2[row_size][col_size];
+              int i,j,a,b;
+               
+                 printf("\nArray one\n");
+                 a=0;
+              for(i=0;i<row_size;i++){
+                 for ( j = 0; j < col_size; j++)
+                   {
+                   printf("element %d: ",++a);
+                     scanf("%d",&arr1[i][j]);
+                       }
+                        }
+                         printf("\nArray two\n");
+                           b=0;
+              for(i=0;i<row_size;i++){
+                  for ( j = 0; j < col_size; j++)
+                   {               
+                 printf("element %d: ",++b);
+                    scanf("%d",&arr2[i][j]);
+                    }
+                      }
+                //matrix - array one
+                        printf("\nMatrix array one\n");
+                for(i=0;i<row_size;i++){
+                  for ( j = 0; j < col_size; j++)
+                      {
+                        printf("%d ",arr1[i][j]);
+                         }
+                          printf("\n");
+                           }
+                 
+                //matrix - array two
+                printf("\nMatrix array two\n");
+                for(i=0;i<row_size;i++){
+                  for ( j = 0; j < col_size; j++)
+                     {
+                      printf("%d ",arr2[i][j]);
+                      }
+                  printf("\n");
+                }
+
+                 printf("\nStatus\n");
+               for(i=0;i<row_size;i++){
+                  for(j=0;j<col_size;j++){
+                      if(arr1[i][j]==arr2[i][j]){
+                         printf("[ Equal ] ");
+                      } 
+                      else
+                      printf("[Unequal] ");                    
+                  }    
+                  printf("\n");                  
+               }
+                  printf("\n");
+                //equal or not equal
+                int isequal=1;
+               printf("\nStatus\n");
+               for(i=0;i<row_size;i++){
+                  for(j=0;j<col_size;j++){
+                      if(arr1[i][j]!=arr2[i][j]){
+                         isequal=0;
+                         printf("\nArray not Equal\n");
+                         break;
+                       }
+                     
+                    }
+                  if(isequal==0){
+                  break;
+                 }
+               }
+                printf("\n");
+                  if(isequal==1){
+                     printf("Array Equal\n");
+
+                        }
+                    
+                   printf("\nBack(Y/N): ");
+                scanf("%s",&go);
+                if(go=='y')
+                break;
+               }
+
+          }break;
+
     /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Reserved for friends<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
                         //Write the code in this section according to your idea
 
     /*=============================================>>>Info<<<===============================================*/
-        case 10:
+        case 11:
           {
             char go;
 
@@ -569,7 +671,7 @@ int main()
            }break;
                
     /*=============================================>>>EXIT<<<===============================================*/
-       case 11:
+       case 12:
           {
             system("cls");
             printf("\n\tHave a nice Day!\n\n");
@@ -604,7 +706,7 @@ int main()
                 exit(0);
                     }
 
-                 }break;
+          }break;
        
              }
   
