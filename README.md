@@ -10,6 +10,4 @@ bugs  in it of  add somthing new to the manu.
 
 ##  Program Preview
 
-![](preview.png)
-
- 
+![preview](https://user-images.githubusercontent.com/86360412/137915214-175de731-da60-4e35-8099-83ef12134e33.png)
